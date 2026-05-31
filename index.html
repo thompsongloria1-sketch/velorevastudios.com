@@ -147,11 +147,14 @@
             border: 1px solid rgba(91, 15, 26, 0.05);
             text-align: center;
             box-shadow: 0 10px 30px rgba(91, 15, 26, 0.02);
-            transition: transform 0.4s ease;
+            transition: transform 0.4s ease, border-color 0.4s ease;
+            cursor: pointer;
+            position: relative;
         }
 
         .card:hover {
             transform: translateY(-5px);
+            border-color: var(--gold);
         }
 
         .card-icon {
@@ -175,6 +178,32 @@
             font-size: 1.2rem;
             color: var(--text-dark);
             line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Video Showcase Container within Cards */
+        .video-container {
+            display: none;
+            margin-top: 1.5rem;
+            width: 100%;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: #000;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        .interactive-hint {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            opacity: 0.8;
+            margin-top: 1rem;
         }
 
         /* Packages Section */
@@ -254,6 +283,7 @@
             text-decoration: none;
             transition: background 0.3s, color 0.3s;
             border: 1px solid var(--burgundy);
+            text-align: center;
         }
 
         .cta-btn:hover {
@@ -290,6 +320,80 @@
         .process-text {
             font-family: var(--font-serif);
             font-size: 1.5rem;
+            color: var(--burgundy);
+        }
+
+        /* Enquiry Page / Contact Form Section */
+        .enquiry-section {
+            background-color: var(--white);
+            padding: 8rem 4rem;
+            border-top: 1px solid rgba(91, 15, 26, 0.05);
+        }
+
+        .enquiry-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .enquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--burgundy);
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--cream);
+            border: 1px solid rgba(91, 15, 26, 0.1);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            background: var(--burgundy);
+            color: var(--cream);
+            border: 1px solid var(--burgundy);
+            padding: 1.2rem;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: transparent;
             color: var(--burgundy);
         }
 
@@ -334,12 +438,17 @@
             opacity: 0.6;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         @media(max-width: 768px) {
             header { padding: 1.5rem; }
             nav { display: none; }
             .hero-title { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1.4rem; }
-            .occasions, .packages-section { padding: 4rem 1.5rem; }
+            .occasions, .packages-section, .enquiry-section { padding: 4rem 1.5rem; }
             .grid-3 { gap: 2rem; }
         }
     </style>
@@ -352,6 +461,7 @@
             <a href="#commissions">Commissions</a>
             <a href="#packages">Packages</a>
             <a href="#process">Process</a>
+            <a href="#enquiry">Enquire</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -365,30 +475,89 @@
     <section id="commissions" class="occasions">
         <h2 class="section-title">The Bespoke Collections</h2>
         <div class="grid-3">
-            <div class="card">
+            <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Memorial</div>
                 <h3 class="card-h3">Funeral Tributes</h3>
                 <p class="card-p">A heartfelt tribute that honors their life, love, and legacy through professional bespoke composition.</p>
+                <p class="interactive-hint">Click to Preview Collection</p>
+                <div class="video-container">
+                    <video controls playsinline preload="none">
+                        <source src="videos/funeral-tribute-preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Honor</div>
                 <h3 class="card-h3">Graduation</h3>
                 <p class="card-p">Celebrate monumental achievements with a timeless, elegant, personalized cinematic soundtrack.</p>
+                <p class="interactive-hint">Click to Preview Collection</p>
+                <div class="video-container">
+                    <video controls playsinline preload="none">
+                        <source src="videos/graduation-preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Celebration</div>
                 <h3 class="card-h3">Birthdays</h3>
                 <p class="card-p">Make their special milestone strictly unforgettable with a high-end song crafted just for them.</p>
+                <p class="interactive-hint">Click to Preview Collection</p>
+                <div class="video-container">
+                    <video controls playsinline preload="none">
+                        <source src="videos/birthday-preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Devotion</div>
                 <h3 class="card-h3">Anniversaries</h3>
                 <p class="card-p">Relive your unique love story through masterfully produced music arranged straight from the heart.</p>
+                <p class="interactive-hint">Click to Preview Collection</p>
+                <div class="video-container">
+                    <video controls playsinline preload="none">
+                        <source src="videos/anniversary-preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Romance</div>
                 <h3 class="card-h3">Weddings</h3>
                 <p class="card-p">The definitive haute couture soundtrack meticulously composed for your unforgettable day.</p>
+                <p class="interactive-hint">Click to Preview Collection</p>
+                <div class="video-container">
+                    <video controls playsinline preload="none">
+                        <source src="videos/wedding-preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="card" onclick="toggleVideo(this)">
+                <div class="card-icon">✧ Intent</div>
+                <h3 class="card-h3">Proposals</h3>
+                <p class="card-p">Set a breathtaking, cinematic ambience for your once-in-a-lifetime question with a customized arrangement.</p>
+                <p class="interactive-hint">Click to Preview Collection</p>
+                <div class="video-container">
+                    <video controls playsinline preload="none">
+                        <source src="videos/proposal-preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="card" onclick="toggleVideo(this)">
+                <div class="card-icon">✧ Spirit & Vision</div>
+                <h3 class="card-h3">Corporate & Praise Worship</h3>
+                <p class="card-p">Elevate professional branding media horizons or connect deeply through custom-arranged, masterfully produced devotional compositions.</p>
+                <p class="interactive-hint">Click to Preview Collection</p>
+                <div class="video-container">
+                    <video controls playsinline preload="none">
+                        <source src="videos/worship-corporate-preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
     </section>
@@ -398,7 +567,7 @@
         <div class="packages-container">
             <div class="package-tier">
                 <h3 class="tier-title">The Signature</h3>
-                <div class="tier-price">£69</div>
+                <div class="tier-price">£70</div>
                 <ul class="tier-features">
                     <li>1 Custom Song (2.30 Minutes)</li>
                     <li>Elegant Digital Cover Art</li>
@@ -452,6 +621,31 @@
         </div>
     </section>
 
+    <section id="enquiry" class="enquiry-section">
+        <div class="enquiry-container">
+            <h2 class="section-title">Bespoke Enquiry</h2>
+            <form class="enquiry-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your elegant name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="name@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="e.g. 07900022229">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Vision</label>
+                    <textarea id="message" name="message" required placeholder="Describe the milestones, memories, or style you wish to compose into a custom soundtrack..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Commission Request</button>
+            </form>
+        </div>
+    </section>
+
     <footer id="contact">
         <div class="footer-logo">VELORÉVA STUDIOS</div>
         <p class="footer-tagline">Let’s turn your story into a song.</p>
@@ -459,9 +653,35 @@
             <p>Direct Atelier: <a href="tel:07784393456">07784393456</a></p>
         </div>
         <div class="footer-social">
-            @velorevastudios • Instagram • TikTok • Fiverr • Etsy
+            @velorevastudios • Instagram • TikTok • Etsy
         </div>
     </footer>
 
+    <script>
+        // Interactive function to toggle collection video dropdowns dynamically
+        function toggleVideo(cardElement) {
+            const videoContainer = cardElement.querySelector('.video-container');
+            const videoElement = videoContainer.querySelector('video');
+            
+            // Check if video container is currently displayed
+            if (videoContainer.style.display === 'block') {
+                videoContainer.style.display = 'none';
+                videoElement.pause();
+            } else {
+                videoContainer.style.display = 'block';
+                videoElement.play().catch(function(error) {
+                    console.log("Autoplay context initialization notice:", error);
+                });
+            }
+        }
+
+        // Prevent clicking video controls from closing the entire collection container card toggle bubble
+        const videoWrappers = document.querySelectorAll('.video-container');
+        videoWrappers.forEach(wrapper => {
+            wrapper.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
 </body>
 </html>
