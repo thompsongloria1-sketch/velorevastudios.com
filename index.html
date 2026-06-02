@@ -10,10 +10,10 @@
     
     <style>
         :root {
-            /* Pure Jet Black to blend perfectly with your uploaded logo background */
+            /* Pure Jet Black across everything to blend your logo seamlessly */
             --bg-dark: #000000;
             --bg-card: #0A0A0A; 
-            --burgundy-deep: #2B060C;
+            --burgundy-deep: #000000;
             --gold-bright: #F3E5AB;
             --gold-metallic: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
             --gold-solid: #D4AF37;
@@ -36,6 +36,7 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             letter-spacing: 1px;
+            font-size: 14px;
         }
 
         ::-webkit-scrollbar {
@@ -57,7 +58,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(15px);
             z-index: 1000;
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
@@ -102,7 +103,6 @@
             position: relative;
         }
 
-        /* Unified Seamless Logo Container */
         .hero-logo-wrapper {
             position: relative;
             max-width: 340px;
@@ -117,7 +117,6 @@
             width: 100%;
             height: auto;
             object-fit: contain;
-            filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.15));
         }
 
         .hero-subtitle {
@@ -264,7 +263,7 @@
             position: absolute;
             top: -12px;
             background: var(--gold-solid);
-            color: var(--bg-dark);
+            color: #000000;
             font-family: var(--font-display);
             font-size: 0.65rem;
             padding: 5px 16px;
@@ -315,42 +314,41 @@
 
         .cta-btn:hover {
             background: var(--gold-solid);
-            color: var(--bg-dark);
+            color: #000000;
             font-weight: 600;
         }
 
+        /* Adjusted Process Layout Block: Justified with Bullet Points */
         .process-section {
             padding: 10rem 4rem;
-            max-width: 1000px;
+            max-width: 750px;
             margin: 0 auto;
         }
 
-        .process-step {
+        .process-list {
+            list-style-type: none;
             display: flex;
-            align-items: center;
-            margin-bottom: 6rem;
+            flex-direction: column;
+            gap: 3.5rem;
+            margin-top: 4rem;
         }
 
-        .process-step:nth-child(even) {
-            flex-direction: row-reverse;
-            text-align: right;
-        }
-
-        .process-number {
-            font-family: var(--font-display);
-            font-size: 3.5rem;
-            background: var(--gold-metallic);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0.6;
-            width: 120px;
-        }
-
-        .process-text {
-            font-size: 1.6rem;
+        .process-item {
+            font-size: 1.5rem;
             font-weight: 300;
+            line-height: 1.7;
+            text-align: justify;
             color: var(--text-light);
-            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .process-bullet {
+            color: var(--gold-solid);
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+            flex-shrink: 0;
         }
 
         .enquiry-section {
@@ -424,7 +422,7 @@
 
         .submit-btn:hover {
             background: var(--gold-solid);
-            color: var(--bg-dark);
+            color: #000000;
             font-weight: 600;
         }
 
@@ -637,30 +635,34 @@
 
     <section id="process" class="process-section">
         <h2 class="section-title">The Creation Process</h2>
-        <div style="margin-top: 4rem;">
-            <div class="process-step">
-                <div class="process-number">I</div>
-                <div class="process-text">Share your unique narrative and key life milestones.</div>
-            </div>
-            <div class="process-step">
-                <div class="process-number">II</div>
-                <div class="process-text">We compose and arrange your highly personalized luxury soundtrack.</div>
-            </div>
-            <div class="process-step">
-                <div class="process-number">III</div>
-                <div class="process-text">Receive your meticulously polished custom high-fidelity studio file.</div>
-            </div>
-            <div class="process-step">
-                <div class="process-number">IV</div>
-                <div class="process-text">Treasure your legacy and share the audio memory forever.</div>
-            </div>
-        </div>
+        <ul class="process-list">
+            <li class="process-item">
+                <span class="process-bullet">✦</span>
+                <span>1. Share your unique narrative and key life milestones.</span>
+            </li>
+            <li class="process-item">
+                <span class="process-bullet">✦</span>
+                <span>2. Make payment.</span>
+            </li>
+            <li class="process-item">
+                <span class="process-bullet">✦</span>
+                <span>3. We compose and arrange your highly personalised luxury soundtrack.</span>
+            </li>
+            <li class="process-item">
+                <span class="process-bullet">✦</span>
+                <span>4. We post it to the customer.</span>
+            </li>
+            <li class="process-item">
+                <span class="process-bullet">✦</span>
+                <span>6. Treasure your legacy and share the audio memory forever.</span>
+            </li>
+        </ul>
     </section>
 
     <section id="enquiry" class="enquiry-section">
         <div class="enquiry-container">
             <h2 class="section-title">Bespoke Enquiry</h2>
-            <form class="enquiry-form" action="#" method="POST">
+            <form class="enquiry-form" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required placeholder="Your elegant name">
@@ -671,7 +673,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Contact Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="e.g. 07784393456">
+                    <input type="tel" id="phone" name="phone" required placeholder="e.g. 07700223006">
                 </div>
                 <div class="form-group">
                     <label for="message">Your Vision</label>
@@ -682,14 +684,14 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="footer-logo">VELORÉVA STUDIOS</div>
         <p class="footer-tagline">Let’s turn your story into a song.</p>
         <div class="footer-contact">
             <p>Direct Atelier: <a href="tel:07784393456">07784393456</a></p>
         </div>
         <div class="footer-social">
-            @velorevastudios • Instagram • TikTok • Fiverr • Etsy
+            @velorevastudios • Instagram • TikTok • Fiverr • 
         </div>
     </footer>
 
@@ -705,7 +707,7 @@
                 videoContainer.style.display = 'block';
                 videoElement.currentTime = 0;
                 videoElement.play().catch(function(error) {
-                    console.log("Autoplay context initialization notice:", error);
+                    console.log("Playback interaction complete:", error);
                 });
             }
         }
