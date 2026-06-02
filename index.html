@@ -101,12 +101,25 @@
             position: relative;
         }
 
-        .hero-logo {
+        /* Clean Logo Isolation Frame */
+        .hero-logo-wrapper {
+            position: relative;
             max-width: 320px;
-            height: auto;
             margin-bottom: 2.5rem;
-            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.2));
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             animation: fadeIn 2s ease forwards;
+        }
+
+        .hero-logo {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.25));
+            /* Blend modes to neutralize editing background squares */
+            mix-blend-mode: screen; 
         }
 
         .hero-subtitle {
@@ -469,7 +482,7 @@
         @media(max-width: 768px) {
             header { padding: 1.5rem; }
             nav { display: none; }
-            .hero-logo { max-width: 240px; }
+            .hero-logo-wrapper { max-width: 240px; }
             .hero-subtitle { font-size: 1.6rem; }
             .occasions, .packages-section, .enquiry-section { padding: 5rem 1.5rem; }
             .grid-3 { gap: 2.5rem; }
@@ -490,7 +503,9 @@
     </header>
 
     <section class="hero">
-        <img src="logo.png" alt="Veloréva Studios Logo" class="hero-logo">
+        <div class="hero-logo-wrapper">
+            <img src="logo.png" alt="Veloréva Studios Logo" class="hero-logo">
+        </div>
         <p class="hero-subtitle">Luxury cinematic songs for life’s most meaningful moments.</p>
         <p class="hero-tagline">“Your memories, composed forever.”</p>
     </section>
