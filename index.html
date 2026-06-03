@@ -10,7 +10,6 @@
     
     <style>
         :root {
-            /* Pure Jet Black across everything to blend your logo seamlessly */
             --bg-dark: #000000;
             --bg-card: #0A0A0A; 
             --burgundy-deep: #000000;
@@ -217,6 +216,36 @@
             display: block;
         }
 
+        /* Luxury Integrated Audio Styling */
+        .audio-player-wrapper {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed rgba(212, 175, 55, 0.2);
+            text-align: left;
+        }
+
+        .audio-split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .audio-label {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            color: var(--gold-bright);
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .audio-player-wrapper audio {
+            width: 100%;
+            filter: invert(1) hue-rotate(180deg);
+            opacity: 0.85;
+            outline: none;
+        }
+
         .interactive-hint {
             font-family: var(--font-display);
             font-size: 0.7rem;
@@ -224,6 +253,36 @@
             color: var(--gold-solid);
             opacity: 0.7;
             margin-top: 1.5rem;
+        }
+
+        /* About Us Atelier Manifesto Styling */
+        .about-section {
+            background-color: #030303;
+            padding: 10rem 4rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .about-quote {
+            font-size: 2rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: 3.5rem;
+        }
+
+        .about-text {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            line-height: 1.9;
+            text-align: justify;
         }
 
         .packages-section {
@@ -318,7 +377,6 @@
             font-weight: 600;
         }
 
-        /* Adjusted Process Layout Block: Justified with Bullet Points */
         .process-section {
             padding: 10rem 4rem;
             max-width: 750px;
@@ -470,9 +528,11 @@
             opacity: 0.5;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+        @media(max-width: 992px) {
+            .audio-split-layout {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
 
         @media(max-width: 768px) {
@@ -480,7 +540,7 @@
             nav { display: none; }
             .hero-logo-wrapper { max-width: 260px; }
             .hero-subtitle { font-size: 1.6rem; }
-            .occasions, .packages-section, .enquiry-section { padding: 5rem 1.5rem; }
+            .occasions, .about-section, .packages-section, .enquiry-section { padding: 5rem 1.5rem; }
             .grid-3 { gap: 2.5rem; }
         }
     </style>
@@ -491,6 +551,7 @@
         <a href="#" class="logo-nav">VELORÉVA</a>
         <nav>
             <a href="#commissions">Commissions</a>
+            <a href="#atelier">The Atelier</a>
             <a href="#packages">Packages</a>
             <a href="#process">Process</a>
             <a href="#enquiry">Enquire</a>
@@ -509,90 +570,191 @@
     <section id="commissions" class="occasions">
         <h2 class="section-title">The Bespoke Collections</h2>
         <div class="grid-3">
+            
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Memorial</div>
                 <h3 class="card-h3">Funeral Tributes</h3>
                 <p class="card-p">A heartfelt tribute that honors their life, love, and legacy through professional bespoke composition.</p>
-                <p class="interactive-hint">Click to Preview Collection</p>
+                <p class="interactive-hint">Click to Preview Visuals</p>
                 <div class="video-container">
                     <video controls playsinline autoplay muted loop preload="auto">
                         <source src="funeral-tribute-preview.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
+                <div class="audio-player-wrapper" onclick="event.stopPropagation();">
+                    <p class="audio-label">✧ Listen to Audio Sample</p>
+                    <audio controls preload="none">
+                        <source src="funeral-tribute-sample.mp4" type="video/mp4">
+                        <source src="funeral-tribute-sample.mp3" type="audio/mp3">
+                    </audio>
+                </div>
             </div>
+
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Honor</div>
                 <h3 class="card-h3">Graduation</h3>
                 <p class="card-p">Celebrate monumental achievements with a timeless, elegant, personalized cinematic soundtrack.</p>
-                <p class="interactive-hint">Click to Preview Collection</p>
+                <p class="interactive-hint">Click to Preview Visuals</p>
                 <div class="video-container">
                     <video controls playsinline autoplay muted loop preload="auto">
                         <source src="graduation-preview.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
+                <div class="audio-player-wrapper" onclick="event.stopPropagation();">
+                    <p class="audio-label">✧ Listen to Audio Sample</p>
+                    <audio controls preload="none">
+                        <source src="graduation-sample.mp4" type="video/mp4">
+                        <source src="graduation-sample.mp3" type="audio/mp3">
+                    </audio>
+                </div>
             </div>
+
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Celebration</div>
                 <h3 class="card-h3">Birthdays</h3>
                 <p class="card-p">Make their special milestone strictly unforgettable with a high-end song crafted just for them.</p>
-                <p class="interactive-hint">Click to Preview Collection</p>
+                <p class="interactive-hint">Click to Preview Visuals</p>
                 <div class="video-container">
                     <video controls playsinline autoplay muted loop preload="auto">
                         <source src="birthday-preview.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
+                <div class="audio-player-wrapper" onclick="event.stopPropagation();">
+                    <p class="audio-label">✧ Listen to Audio Sample</p>
+                    <audio controls preload="none">
+                        <source src="birthday-sample.mp4" type="video/mp4">
+                        <source src="birthday-sample.mp3" type="audio/mp3">
+                    </audio>
+                </div>
             </div>
+
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Devotion</div>
                 <h3 class="card-h3">Anniversaries</h3>
                 <p class="card-p">Relive your unique love story through masterfully produced music arranged straight from the heart.</p>
-                <p class="interactive-hint">Click to Preview Collection</p>
+                <p class="interactive-hint">Click to Preview Visuals</p>
                 <div class="video-container">
                     <video controls playsinline autoplay muted loop preload="auto">
                         <source src="anniversary-preview.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
+                <div class="audio-player-wrapper" onclick="event.stopPropagation();">
+                    <p class="audio-label">✧ Listen to Audio Sample</p>
+                    <audio controls preload="none">
+                        <source src="anniversary-sample.mp4" type="video/mp4">
+                        <source src="anniversary-sample.mp3" type="audio/mp3">
+                    </audio>
+                </div>
             </div>
+
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Romance</div>
                 <h3 class="card-h3">Weddings</h3>
                 <p class="card-p">The definitive haute couture soundtrack meticulously composed for your unforgettable day.</p>
-                <p class="interactive-hint">Click to Preview Collection</p>
+                <p class="interactive-hint">Click to Preview Visuals</p>
                 <div class="video-container">
                     <video controls playsinline autoplay muted loop preload="auto">
                         <source src="wedding-preview.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
+                <div class="audio-player-wrapper" onclick="event.stopPropagation();">
+                    <p class="audio-label">✧ Listen to Audio Sample</p>
+                    <audio controls preload="none">
+                        <source src="wedding-sample.mp4" type="video/mp4">
+                        <source src="wedding-sample.mp3" type="audio/mp3">
+                    </audio>
+                </div>
             </div>
+
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Intent</div>
                 <h3 class="card-h3">Proposals</h3>
                 <p class="card-p">Set a breathtaking, cinematic ambience for your once-in-a-lifetime question with a customized arrangement.</p>
-                <p class="interactive-hint">Click to Preview Collection</p>
+                <p class="interactive-hint">Click to Preview Visuals</p>
                 <div class="video-container">
                     <video controls playsinline autoplay muted loop preload="auto">
                         <source src="proposal-preview.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
+                <div class="audio-player-wrapper" onclick="event.stopPropagation();">
+                    <p class="audio-label">✧ Listen to Audio Sample</p>
+                    <audio controls preload="none">
+                        <source src="proposal-sample.mp4" type="video/mp4">
+                        <source src="proposal-sample.mp3" type="audio/mp3">
+                    </audio>
+                </div>
             </div>
+
+            <div class="card" onclick="toggleVideo(this)">
+                <div class="card-icon">✧ Narrative & Reflection</div>
+                <h3 class="card-h3">Tributes</h3>
+                <p class="card-p">Powerful bespoke compositions tailored for intimate emotional messaging, deep apologies, or closure.</p>
+                <p class="interactive-hint">Click to Preview Visuals</p>
+                <div class="video-container">
+                    <video controls playsinline autoplay muted loop preload="auto">
+                        <source src="tribute-preview.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="audio-player-wrapper" onclick="event.stopPropagation();">
+                    <div class="audio-split-layout">
+                        <div>
+                            <p class="audio-label">✧ Apology Sample</p>
+                            <audio controls preload="none">
+                                <source src="tribute-apology-sample.mp4" type="video/mp4">
+                                <source src="tribute-apology-sample.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                        <div>
+                            <p class="audio-label">✧ Break-Up Sample</p>
+                            <audio controls preload="none">
+                                <source src="tribute-breakup-sample.mp4" type="video/mp4">
+                                <source src="tribute-breakup-sample.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">✧ Spirit & Vision</div>
                 <h3 class="card-h3">Corporate & Praise Worship</h3>
-                <p class="card-p">Elevate professional branding media horizons or connect deeply through custom-arranged, masterfully produced devotional compositions.</p>
-                <p class="interactive-hint">Click to Preview Collection</p>
+                <p class="card-p">Elevate professional media horizons or connect deeply through custom-arranged devotional compositions.</p>
+                <p class="interactive-hint">Click to Preview Visuals</p>
                 <div class="video-container">
                     <video controls playsinline autoplay muted loop preload="auto">
                         <source src="worship-corporate-preview.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
+                <div class="audio-player-wrapper" onclick="event.stopPropagation();">
+                    <div class="audio-split-layout">
+                        <div>
+                            <p class="audio-label">✧ Corporate Sample</p>
+                            <audio controls preload="none">
+                                <source src="worship-corporate-sample.mp4" type="video/mp4">
+                                <source src="worship-corporate-sample.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                        <div>
+                            <p class="audio-label">✧ Praise & Worship</p>
+                            <audio controls preload="none">
+                                <source src="worship-praise-sample.mp4" type="video/mp4">
+                                <source src="worship-praise-sample.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+        </div>
+    </section>
+
+    <section id="atelier" class="about-section">
+        <div class="about-container">
+            <h2 class="section-title">The Atelier</h2>
+            <p class="about-quote">“We do not merely write lyrics; we capture a lifetime of emotion, composed into an everlasting cinematic heirloom.”</p>
+            <p class="about-text">
+                Veloréva Studios was born from a singular, uncompromising vision: to elevate life’s most profound milestones through the timeless power of bespoke, high-fidelity orchestration. Whether honoring a beautiful legacy, celebrating a monumental triumph, or sealing a once-in-a-lifetime devotion, we sculpt your personal narrative into haute couture musical compositions. Based in the United Kingdom, our elite creative directors and master producers blend cinematic arrangements with breathtaking vocal narratives—spanning cinematic orchestration, soulful melodies, and vibrant contemporary rhythms. Every commission is an intimate collaboration, meticulously polished to ensure your most treasured memories live on forever.
+            </p>
         </div>
     </section>
 
@@ -662,7 +824,7 @@
     <section id="enquiry" class="enquiry-section">
         <div class="enquiry-container">
             <h2 class="section-title">Bespoke Enquiry</h2>
-            <form class="enquiry-form" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+            <form class="enquiry-form" action="#" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required placeholder="Your elegant name">
@@ -673,7 +835,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Contact Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="e.g. 07700223006">
+                    <input type="tel" id="phone" name="phone" required placeholder="e.g. 07700220026">
                 </div>
                 <div class="form-group">
                     <label for="message">Your Vision</label>
@@ -704,10 +866,11 @@
                 videoContainer.style.display = 'none';
                 videoElement.pause();
             } else {
+                videoContainer.style.width = '100%';
                 videoContainer.style.display = 'block';
                 videoElement.currentTime = 0;
                 videoElement.play().catch(function(error) {
-                    console.log("Playback interaction complete:", error);
+                    console.log("Playback layout initialize notice:", error);
                 });
             }
         }
