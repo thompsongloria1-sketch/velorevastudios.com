@@ -266,27 +266,47 @@
             text-align: center;
         }
 
-        /* 2-Column Desktop Atelier Layout focusing Video on Left */
-        .atelier-split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+        .about-container {
             max-width: 1100px;
             margin: 0 auto;
-            align-items: center;
         }
 
-        /* Left Column: Dedicated Atelier Video Frame Layout per sketch */
+        /* 2-Column Desktop Atelier Layout per sketch directive */
+        .atelier-split-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4.5rem;
+            align-items: center;
+            text-align: left;
+        }
+
+        /* Left Column: Fixed aspect-ratio fluid iframe window wrapper */
         .atelier-video-wrapper {
             width: 100%;
+            position: relative;
+            padding-bottom: 56.25%; /* Clean responsive 16:9 widescreen box mapping */
+            height: 0;
             border: 1px solid rgba(212, 175, 55, 0.3);
             background: #000000;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
         }
 
-        /* Right Column: Atelier brand manifesto text focusing center alignment */
+        .atelier-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Right Column: Atelier brand text alignment settings */
         .atelier-text-wrapper {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .about-quote {
@@ -684,6 +704,7 @@
             }
         }
 
+        /* Responsive Mobile Realignment & Aspect Metrics */
         @media(max-width: 768px) {
             header {
                 padding: 1.5rem;
@@ -727,13 +748,12 @@
                 padding: 4rem 1.5rem; 
             }
             
-            /* Optimized Mobile Atelier: Stack components and center everything */
             .about-section {
                 padding: 4rem 1.2rem;
                 text-align: center;
             }
 
-            /* Stack columns into a single column vertical layout on mobile */
+            /* Responsive Mobile View Stack: Video loads directly on top, centered content */
             .atelier-split-layout {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -743,9 +763,8 @@
             }
 
             .atelier-video-wrapper {
-                margin-bottom: 1rem;
                 width: 100%;
-                max-width: 480px; /* Constrain size for mobile symmetry */
+                max-width: 480px;
                 margin: 0 auto;
             }
 
@@ -831,9 +850,7 @@
             <div class="atelier-split-layout">
                 
                 <div class="atelier-video-wrapper">
-                    <video width="100%" height="auto" controls playsinline preload="auto" oncontextmenu="return false;">
-                        <source src="intro.html" type="video/mp4">
-                    </video>
+                    <iframe src="intro.html" title="Veloréva Atelier Presentation" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
 
                 <div class="atelier-text-wrapper">
@@ -1112,7 +1129,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Contact Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="e.g. +44 7704 220056">
+                    <input type="tel" id="phone" name="phone" required placeholder="e.g. +44 7784 393456">
                 </div>
                 <div class="form-group">
                     <label for="message">Your Vision</label>
@@ -1176,6 +1193,16 @@
                     a.pause();
                 }
             });
+            
+            // Handle iframe source isolation safely
+            const atelierIframe = document.querySelector('.atelier-video-wrapper iframe');
+            if (atelierIframe && activeMediaInstance !== atelierIframe) {
+                // Post pause directive to active iframe window instance if applicable
+                const iframeWindow = atelierIframe.contentWindow;
+                if (iframeWindow) {
+                    iframeWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                }
+            }
         }
 
         window.addEventListener('play', function(e) {
