@@ -283,13 +283,15 @@
         /* Left Column: Fixed aspect-ratio fluid native content wrapper */
         .atelier-video-wrapper {
             width: 100%;
-            position: relative;
-            padding-bottom: 56.25%; /* Responsive 16:9 box ratio mapping */
-            height: 0;
+            max-width: 380px; /* Constrains the width so a 9:16 tall video doesn't overwhelm the desktop text */
+            margin: 0 auto;
             border: 1px solid rgba(212, 175, 55, 0.3);
             background: #000000;
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            aspect-ratio: 9 / 16; /* Forces a strict, premium vertical presentation */
         }
 
         .atelier-video-wrapper object {
