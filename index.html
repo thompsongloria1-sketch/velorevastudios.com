@@ -108,8 +108,8 @@
 
         .hero-logo-wrapper {
             position: relative;
-            max-width: 340px;
-            margin-bottom: 2.5rem;
+            max-width: 320px;
+            margin-bottom: 1.2rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -123,18 +123,19 @@
         }
 
         .hero-subtitle {
-            font-size: 2.2rem;
+            font-size: 2.0rem;
             font-weight: 300;
             font-style: italic;
             color: var(--text-light);
-            max-width: 700px;
-            margin-bottom: 2rem;
+            max-width: 100%;
+            white-space: nowrap;
+            margin-bottom: 1.8rem;
             line-height: 1.4;
         }
 
         .hero-tagline {
             font-family: var(--font-display);
-            font-size: 1.1rem;
+            font-size: 1.0rem;
             letter-spacing: 5px;
             color: var(--gold-solid);
         }
@@ -198,7 +199,7 @@
         }
 
         .card-p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 300;
             color: var(--text-muted);
             line-height: 1.7;
@@ -265,22 +266,41 @@
             text-align: center;
         }
 
-        .about-container {
-            max-width: 850px;
+        /* 2-Column Desktop Atelier Layout focusing Video on Left */
+        .atelier-split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
             margin: 0 auto;
+            align-items: center;
+        }
+
+        /* Left Column: Dedicated Atelier Video Frame Layout per sketch */
+        .atelier-video-wrapper {
+            width: 100%;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: #000000;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Right Column: Atelier brand manifesto text focusing center alignment */
+        .atelier-text-wrapper {
+            text-align: center;
         }
 
         .about-quote {
-            font-size: 2rem;
+            font-size: 1.85rem;
             font-weight: 300;
             font-style: italic;
             color: var(--text-light);
             line-height: 1.5;
-            margin-bottom: 3.5rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
         }
 
         .about-text {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 300;
             color: var(--text-muted);
             line-height: 1.9;
@@ -349,7 +369,7 @@
 
         .tier-features {
             list-style: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
             line-height: 2.4;
             margin-bottom: 4rem;
@@ -394,7 +414,7 @@
         }
 
         .process-item {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 300;
             line-height: 1.7;
             text-align: justify;
@@ -486,7 +506,6 @@
             font-weight: 600;
         }
 
-        /* Luxury On-Screen Modal Notification Styles */
         .luxury-modal-overlay {
             position: fixed;
             top: 0;
@@ -548,13 +567,12 @@
         }
 
         .modal-body {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
             line-height: 1.8;
             margin-bottom: 3.5rem;
             font-weight: 300;
             text-align: justify;
-            text-justify: inter-word;
         }
 
         .modal-close-btn {
@@ -653,6 +671,135 @@
             letter-spacing: 2px;
             opacity: 0.4;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media(max-width: 992px) {
+            .audio-split-layout {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media(max-width: 768px) {
+            header {
+                padding: 1.5rem;
+                justify-content: center;
+            }
+            
+            nav { 
+                display: none;
+            }
+            
+            .hero {
+                padding: 0 1rem;
+            }
+
+            .hero-logo-wrapper { 
+                max-width: 240px; 
+                margin-bottom: 1.2rem;
+            }
+            
+            .hero-subtitle { 
+                font-size: 1.1rem;
+                white-space: normal;
+                margin-bottom: 1.5rem;
+                padding: 0 0.5rem;
+                text-align: center;
+            }
+
+            .hero-tagline {
+                font-size: 0.85rem;
+                text-align: center;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                letter-spacing: 5px;
+                margin-bottom: 3.5rem;
+                text-align: center;
+            }
+
+            .occasions, .packages-section, .enquiry-section { 
+                padding: 4rem 1.5rem; 
+            }
+            
+            /* Optimized Mobile Atelier: Stack components and center everything */
+            .about-section {
+                padding: 4rem 1.2rem;
+                text-align: center;
+            }
+
+            /* Stack columns into a single column vertical layout on mobile */
+            .atelier-split-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                width: 100%;
+                padding: 0;
+                align-items: center;
+            }
+
+            .atelier-video-wrapper {
+                margin-bottom: 1rem;
+                width: 100%;
+                max-width: 480px; /* Constrain size for mobile symmetry */
+                margin: 0 auto;
+            }
+
+            .atelier-text-wrapper {
+                text-align: center;
+                width: 100%;
+            }
+
+            .about-quote {
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .about-text {
+                font-size: 1.1rem;
+                text-align: center;
+                line-height: 1.7;
+            }
+
+            .grid-3 { 
+                gap: 2.5rem; 
+            }
+
+            .card {
+                padding: 3rem 1.5rem;
+            }
+
+            .process-section {
+                padding: 4rem 1.5rem;
+            }
+
+            .process-item {
+                font-size: 1.1rem;
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .luxury-modal-content {
+                padding: 3rem 1.5rem;
+            }
+
+            .modal-crest {
+                font-size: 1.6rem;
+            }
+
+            .modal-body {
+                font-size: 1.0rem;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -660,8 +807,8 @@
     <header>
         <a href="#" class="logo-nav">VELORÉVA</a>
         <nav>
-            <a href="#commissions">Commissions</a>
             <a href="#atelier">The Atelier</a>
+            <a href="#commissions">Commissions</a>
             <a href="#packages">Packages</a>
             <a href="#process">Process</a>
             <a href="#enquiry">Enquire</a>
@@ -675,6 +822,28 @@
         </div>
         <p class="hero-subtitle">Luxury cinematic songs for life’s most meaningful moments.</p>
         <p class="hero-tagline">“Your memories, composed forever.”</p>
+    </section>
+
+    <section id="atelier" class="about-section">
+        <div class="about-container">
+            <h2 class="section-title">The Atelier</h2>
+            
+            <div class="atelier-split-layout">
+                
+                <div class="atelier-video-wrapper">
+                    <video width="100%" height="auto" controls playsinline preload="auto" oncontextmenu="return false;">
+                        <source src="intro.html" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="atelier-text-wrapper">
+                    <p class="about-quote">“We do not merely write lyrics; we capture a lifetime of emotion, composed into an everlasting cinematic heirloom.”</p>
+                    <p class="about-text">
+                        Veloréva Studios was born from a singular, uncompromising vision: to elevate life’s most profound milestones through the timeless power of bespoke, high-fidelity orchestration. Whether honoring a beautiful legacy, celebrating a monumental triumph, or sealing a once-in-a-lifetime devotion, we sculpt your personal narrative into haute couture musical compositions. Based in the United Kingdom, our elite creative directors and master producers blend cinematic arrangements with breathtaking vocal narratives—spanning cinematic orchestration, soulful melodies, and vibrant contemporary rhythms. Every commission is an intimate collaboration, meticulously polished to ensure your most treasured memories live on forever.
+                    </p>
+                </div>
+
+            </div> </div>
     </section>
 
     <section id="commissions" class="occasions">
@@ -866,16 +1035,6 @@
         </div>
     </section>
 
-    <section id="atelier" class="about-section">
-        <div class="about-container">
-            <h2 class="section-title">The Atelier</h2>
-            <p class="about-quote">“We do not merely write lyrics; we capture a lifetime of emotion, composed into an everlasting cinematic heirloom.”</p>
-            <p class="about-text">
-                Veloréva Studios was born from a singular, uncompromising vision: to elevate life’s most profound milestones through the timeless power of bespoke, high-fidelity orchestration. Whether honoring a beautiful legacy, celebrating a monumental triumph, or sealing a once-in-a-lifetime devotion, we sculpt your personal narrative into haute couture musical compositions. Based in the United Kingdom, our elite creative directors and master producers blend cinematic arrangements with breathtaking vocal narratives—spanning cinematic orchestration, soulful melodies, and vibrant contemporary rhythms. Every commission is an intimate collaboration, meticulously polished to ensure your most treasured memories live on forever.
-            </p>
-        </div>
-    </section>
-
     <section id="packages" class="packages-section">
         <h2 class="section-title">Signature Commissions</h2>
         <div class="packages-container">
@@ -934,7 +1093,7 @@
             </li>
             <li class="process-item">
                 <span class="process-bullet">✦</span>
-                <span>6. Treasure your legacy and share the audio memory forever.</span>
+                <span>5. Treasure your legacy and share the audio memory forever.</span>
             </li>
         </ul>
     </section>
@@ -953,7 +1112,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Contact Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="e.g. +44 7784 393456">
+                    <input type="tel" id="phone" name="phone" required placeholder="e.g. +44 7704 220056">
                 </div>
                 <div class="form-group">
                     <label for="message">Your Vision</label>
@@ -984,7 +1143,7 @@
         <div class="footer-contact">
             <p>Direct Atelier: <a href="tel:+447784393456">+44 (0) 7784 393456</a></p>
             <p style="font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 2px;">
-                ✧ Concierge: <a href="https://wa.me/447784393456" style="color: var(--gold-solid); font-weight: 500; border-bottom: 1px solid var(--gold-solid);">Message via WhatsApp</a>
+                Concierge: <a href="https://wa.me/447784393456" style="color: var(--gold-solid); font-weight: 500; border-bottom: 1px solid var(--gold-solid);">Message via WhatsApp</a>
             </p>
         </div>
 
@@ -1003,7 +1162,6 @@
     </footer>
 
     <script>
-        // Total isolation media script
         function silenceAllPlayers(activeMediaInstance) {
             const architecturalVideos = document.querySelectorAll('video');
             architecturalVideos.forEach(v => {
@@ -1044,27 +1202,25 @@
             }
         }
 
-        const targetedWrappers = document.querySelectorAll('.video-container, .audio-player-wrapper');
+        const targetedWrappers = document.querySelectorAll('.video-container, .audio-player-wrapper, .atelier-video-wrapper');
         targetedWrappers.forEach(item => {
             item.addEventListener('click', function(evt) {
                 evt.stopPropagation();
             });
         });
 
-        // Elite Silent Form Handling & Luxury Pop-Up Engine
         const formElement = document.getElementById('veloreva-form');
         const submitButton = document.getElementById('submit-button');
         const modalOverlay = document.getElementById('luxury-thankyou-modal');
 
         formElement.addEventListener('submit', function(event) {
-            event.preventDefault(); // Stop page from redirecting to Formspree
+            event.preventDefault();
             
             submitButton.innerText = "Transmitting to Atelier...";
             submitButton.disabled = true;
 
             const formData = new FormData(formElement);
 
-            // Send form information in background via background request
             fetch(formElement.action, {
                 method: 'POST',
                 body: formData,
@@ -1074,9 +1230,7 @@
             })
             .then(response => {
                 if (response.ok) {
-                    // Reset fields cleanly
                     formElement.reset();
-                    // Fade-in luxury overlay modal panel
                     modalOverlay.classList.add('active');
                 } else {
                     alert("Transmission notice: System was unable to register submission. Please try again.");
