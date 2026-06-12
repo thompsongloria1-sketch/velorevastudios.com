@@ -280,11 +280,11 @@
             text-align: left;
         }
 
-        /* Left Column: Fixed aspect-ratio fluid iframe window wrapper */
+        /* Left Column: Fixed aspect-ratio fluid native content wrapper */
         .atelier-video-wrapper {
             width: 100%;
             position: relative;
-            padding-bottom: 56.25%; /* Clean responsive 16:9 widescreen box mapping */
+            padding-bottom: 56.25%; /* Responsive 16:9 box ratio mapping */
             height: 0;
             border: 1px solid rgba(212, 175, 55, 0.3);
             background: #000000;
@@ -292,7 +292,7 @@
             overflow: hidden;
         }
 
-        .atelier-video-wrapper iframe {
+        .atelier-video-wrapper object {
             position: absolute;
             top: 0;
             left: 0;
@@ -850,7 +850,7 @@
             <div class="atelier-split-layout">
                 
                 <div class="atelier-video-wrapper">
-                    <iframe src="intro.html" title="Veloréva Atelier Presentation" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <object type="text/html" data="intro.html"></object>
                 </div>
 
                 <div class="atelier-text-wrapper">
@@ -1166,7 +1166,7 @@
 
         <div class="social-icons-wrapper">
             <a href="https://instagram.com/velorevastudios" target="_blank" class="social-icon-link" aria-label="Instagram">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07;-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
             </a>
             <a href="https://tiktok.com/@velorevastudios" target="_blank" class="social-icon-link" aria-label="TikTok">
                 <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.05 1.61 4.21 1.13 1.25 2.74 2.08 4.38 2.3v3.89c-1.84 0-3.66-.49-5.23-1.42-.23-.14-.45-.29-.66-.45-.04 2.11.01 4.21-.01 6.32-.12 2.72-1.39 5.37-3.71 6.84-2.37 1.47-5.54 1.71-8.1 0-2.45-1.6-3.72-4.6-3.32-7.51.36-2.88 2.45-5.38 5.28-6.09.84-.21 1.71-.27 2.57-.18v4.06c-.63-.15-1.32-.12-1.94.12-1.12.44-1.89 1.54-1.97 2.73-.11 1.25.54 2.49 1.58 3.12 1.07.66 2.51.6 3.49-.19.78-.61 1.21-1.6 1.21-2.6.03-3.61-.02-7.22.02-10.83z"/></svg>
@@ -1193,16 +1193,6 @@
                     a.pause();
                 }
             });
-            
-            // Handle iframe source isolation safely
-            const atelierIframe = document.querySelector('.atelier-video-wrapper iframe');
-            if (atelierIframe && activeMediaInstance !== atelierIframe) {
-                // Post pause directive to active iframe window instance if applicable
-                const iframeWindow = atelierIframe.contentWindow;
-                if (iframeWindow) {
-                    iframeWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                }
-            }
         }
 
         window.addEventListener('play', function(e) {
