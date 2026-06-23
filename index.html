@@ -13,18 +13,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --bg-dark: #000000;
-            --bg-card: #0A0A0A; 
-            --burgundy-deep: #000000;
-            --gold-bright: #F3E5AB;
-            --gold-metallic: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
-            --gold-solid: #D4AF37;
-            --text-light: #F9F6F0;
-            --text-muted: #A39A92;
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-display: 'Cinzel', serif;
-        }
+    :root {
+        --bg-dark: #000000;
+        --bg-card: #0A0A0A; 
+        --burgundy-deep: #000000;
+        --gold-bright: #F3E5AB;
+        --gold-metallic: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+        --gold-solid: #D4AF37;
+        --text-light: #F9F6F0;
+        --text-muted: #A39A92;
+        --font-serif: 'Cormorant Garamond', serif;
+        --font-display: 'Cinzel', serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+    }
+
+    .payment-btn {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        margin-top: 15px;
+        background: transparent;
+        border: 1px solid var(--gold-bright);
+        color: var(--gold-bright);
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .payment-btn:hover {
+        background: var(--gold-bright);
+        color: #000;
+    }
+</style>
 
         * {
             margin: 0;
