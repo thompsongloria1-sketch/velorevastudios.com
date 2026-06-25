@@ -709,19 +709,23 @@
         to { opacity: 1; transform: translateY(0); }
     }
 
-    @media(max-width: 992px) {
-        .audio-split-layout {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
+    /* Mobile: Force single column stack */
+@media(max-width: 768px) {
+    .grid-3 {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Forces each card to occupy its own line */
+        gap: 2rem !important;
     }
+}
 
-    /* Responsive Mobile Realignment & Aspect Metrics */
-    @media(max-width: 768px) {
-        header {
-            padding: 1.5rem;
-            justify-content: center;
-        }
+/* Desktop: Force three-column row */
+@media(min-width: 769px) {
+    .grid-3 {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* Forces 3 cards side-by-side */
+        gap: 3.5rem !important;
+    }
+}
         
         nav { 
             display: none;
