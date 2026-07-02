@@ -25,19 +25,13 @@
         --font-serif: 'Cormorant Garamond', serif;
         --font-display: 'Cinzel', serif;
     }
-
+ 
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
+ 
     /* FIXED CSS */
     .packages-container {
         display: flex !important;
@@ -48,7 +42,7 @@
         padding: 20px !important;
         background: transparent !important;
     }
-
+ 
     .package-tier {
         flex: 1 !important;
         min-width: 300px !important;
@@ -56,8 +50,7 @@
         margin: 0 !important;
         background: transparent !important;
     }
-    /* Fixed the dangling brace here */
-
+ 
     body {
         background-color: var(--bg-dark);
         color: var(--text-light);
@@ -67,7 +60,7 @@
         letter-spacing: 1px;
         font-size: 14px;
     }
-
+ 
     ::-webkit-scrollbar {
         width: 6px;
     }
@@ -78,7 +71,7 @@
         background: var(--gold-solid);
         border-radius: 3px;
     }
-
+ 
     header {
         position: fixed;
         top: 0;
@@ -92,7 +85,7 @@
         z-index: 1000;
         border-bottom: 1px solid rgba(212, 175, 55, 0.15);
     }
-
+ 
     .logo-nav {
         font-family: var(--font-display);
         font-size: 1.3rem;
@@ -104,7 +97,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+ 
     nav a {
         text-decoration: none;
         color: var(--text-muted);
@@ -114,12 +107,12 @@
         margin-left: 3rem;
         transition: color 0.4s, letter-spacing 0.4s;
     }
-
+ 
     nav a:hover {
         color: var(--gold-bright);
         letter-spacing: 4px;
     }
-
+ 
     .hero {
         height: 100vh;
         display: flex;
@@ -131,7 +124,7 @@
         background: #000000;
         position: relative;
     }
-
+ 
     .hero-logo-wrapper {
         position: relative;
         max-width: 320px;
@@ -141,13 +134,13 @@
         align-items: center;
         animation: fadeIn 2s ease forwards;
     }
-
+ 
     .hero-logo {
         width: 100%;
         height: auto;
         object-fit: contain;
     }
-
+ 
     .hero-subtitle {
         font-size: 2.0rem;
         font-weight: 300;
@@ -158,20 +151,20 @@
         margin-bottom: 1.8rem;
         line-height: 1.4;
     }
-
+ 
     .hero-tagline {
         font-family: var(--font-display);
         font-size: 1.0rem;
         letter-spacing: 5px;
         color: var(--gold-solid);
     }
-
+ 
     .occasions {
         padding: 10rem 4rem;
         max-width: 1400px;
         margin: 0 auto;
     }
-
+ 
     .section-title {
         font-family: var(--font-display);
         text-align: center;
@@ -183,13 +176,13 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+ 
     .grid-3 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
         gap: 3.5rem;
     }
-
+ 
     .card {
         background: var(--bg-card);
         padding: 4rem 2.5rem;
@@ -201,12 +194,12 @@
         border-image: var(--gold-metallic) 1;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
     }
-
+ 
     .card:hover {
         transform: translateY(-8px);
         box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
     }
-
+ 
     .card-icon {
         font-family: var(--font-display);
         font-size: 0.8rem;
@@ -214,7 +207,7 @@
         letter-spacing: 4px;
         margin-bottom: 1.5rem;
     }
-
+ 
     .card-h3 {
         font-family: var(--font-display);
         font-size: 1.5rem;
@@ -223,7 +216,7 @@
         font-weight: 400;
         color: var(--text-light);
     }
-
+ 
     .card-p {
         font-size: 1.1rem;
         font-weight: 300;
@@ -231,7 +224,7 @@
         line-height: 1.7;
         margin-bottom: 1.5rem;
     }
-
+ 
     .video-container {
         display: none;
         margin-top: 2rem;
@@ -241,25 +234,25 @@
         overflow: hidden;
         animation: fadeIn 0.6s ease forwards;
     }
-
+ 
     .video-container video {
         width: 100%;
         display: block;
     }
-
+ 
     .audio-player-wrapper {
         margin-top: 2rem;
         padding-top: 1.5rem;
         border-top: 1px dashed rgba(212, 175, 55, 0.2);
         text-align: left;
     }
-
+ 
     .audio-split-layout {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
-
+ 
     .audio-label {
         font-family: var(--font-display);
         font-size: 0.75rem;
@@ -268,14 +261,14 @@
         margin-bottom: 0.75rem;
         text-transform: uppercase;
     }
-
+ 
     .audio-player-wrapper audio {
         width: 100%;
         filter: invert(1) hue-rotate(180deg);
         opacity: 0.85;
         outline: none;
     }
-
+ 
     .interactive-hint {
         font-family: var(--font-display);
         font-size: 0.7rem;
@@ -284,19 +277,19 @@
         opacity: 0.7;
         margin-top: 1.5rem;
     }
-
+ 
     .about-section {
         background-color: #030303;
         padding: 10rem 4rem;
         border-top: 1px solid rgba(212, 175, 55, 0.1);
         text-align: center;
     }
-
+ 
     .about-container {
         max-width: 1100px;
         margin: 0 auto;
     }
-
+ 
     .atelier-split-layout {
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
@@ -304,7 +297,7 @@
         align-items: center;
         text-align: left;
     }
-
+ 
     .atelier-video-wrapper {
         width: 100%;
         max-width: 380px;
@@ -317,7 +310,7 @@
         align-items: center;
         aspect-ratio: 9 / 16;
     }
-
+ 
     .atelier-video-wrapper object {
         position: absolute;
         top: 0;
@@ -327,13 +320,13 @@
         border: none;
         display: block;
     }
-
+ 
     .atelier-text-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
+ 
     .about-quote {
         font-size: 1.85rem;
         font-weight: 300;
@@ -343,7 +336,7 @@
         margin-bottom: 1.2rem;
         text-align: center;
     }
-
+ 
     .about-text {
         font-size: 1.25rem;
         font-weight: 300;
@@ -351,20 +344,20 @@
         line-height: 1.9;
         text-align: justify;
     }
-
+ 
     .packages-section {
         background-color: #050505;
         padding: 10rem 4rem;
         border-top: 1px solid rgba(212, 175, 55, 0.1);
     }
-
+ 
     .package-tier.featured {
         border: 1px solid transparent;
         border-image: var(--gold-metallic) 1;
         background: linear-gradient(rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95)), var(--gold-metallic);
         box-shadow: 0 0 30px rgba(212, 175, 55, 0.05);
     }
-
+ 
     .package-tier.featured::before {
         content: 'SIGNATURE SELECTION';
         position: absolute;
@@ -377,7 +370,7 @@
         letter-spacing: 3px;
         font-weight: 600;
     }
-
+ 
     .tier-title {
         font-family: var(--font-display);
         font-size: 1.3rem;
@@ -385,14 +378,14 @@
         margin-bottom: 1.5rem;
         color: var(--text-light);
     }
-
+ 
     .tier-price {
         font-size: 3rem;
         font-weight: 300;
         color: var(--gold-bright);
         margin-bottom: 2.5rem;
     }
-
+ 
     .tier-features {
         list-style: none;
         font-size: 1.1rem;
@@ -401,7 +394,7 @@
         margin-bottom: 4rem;
         flex-grow: 1;
     }
-
+ 
     .cta-btn {
         display: inline-block;
         width: 100%;
@@ -418,19 +411,19 @@
         transition: all 0.4s ease;
         text-align: center;
     }
-
+ 
     .cta-btn:hover {
         background: var(--gold-solid);
         color: #000000;
         font-weight: 600;
     }
-
+ 
     .process-section {
         padding: 10rem 4rem;
         max-width: 750px;
         margin: 0 auto;
     }
-
+ 
     .process-list {
         list-style-type: none;
         display: flex;
@@ -438,7 +431,7 @@
         gap: 3.5rem;
         margin-top: 4rem;
     }
-
+ 
     .process-item {
         font-size: 1.35rem;
         font-weight: 300;
@@ -449,38 +442,38 @@
         align-items: flex-start;
         gap: 1.5rem;
     }
-
+ 
     .process-bullet {
         color: var(--gold-solid);
         font-size: 1.2rem;
         line-height: 2.2rem;
         flex-shrink: 0;
     }
-
+ 
     .enquiry-section {
         background-color: var(--bg-card);
         padding: 10rem 4rem;
         border-top: 1px solid rgba(212, 175, 55, 0.15);
     }
-
+ 
     .enquiry-container {
         max-width: 700px;
         margin: 0 auto;
     }
-
+ 
     .enquiry-form {
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
         margin-top: 4rem;
     }
-
+ 
     .form-group {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
     }
-
+ 
     .form-group label {
         font-family: var(--font-display);
         font-size: 0.8rem;
@@ -488,7 +481,7 @@
         text-transform: uppercase;
         color: var(--gold-bright);
     }
-
+ 
     .form-group input, 
     .form-group textarea {
         width: 100%;
@@ -500,18 +493,18 @@
         font-size: 1.1rem;
         transition: border-color 0.4s ease;
     }
-
+ 
     .form-group input:focus, 
     .form-group textarea:focus {
         outline: none;
         border-color: var(--gold-solid);
     }
-
+ 
     .form-group textarea {
         resize: vertical;
         min-height: 160px;
     }
-
+ 
     .submit-btn {
         background: transparent;
         color: var(--text-light);
@@ -525,13 +518,13 @@
         cursor: pointer;
         transition: all 0.4s ease;
     }
-
+ 
     .submit-btn:hover {
         background: var(--gold-solid);
         color: #000000;
         font-weight: 600;
     }
-
+ 
     .luxury-modal-overlay {
         position: fixed;
         top: 0;
@@ -549,12 +542,12 @@
         transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         padding: 2rem;
     }
-
+ 
     .luxury-modal-overlay.active {
         opacity: 1;
         pointer-events: auto;
     }
-
+ 
     .luxury-modal-content {
         background: var(--bg-card);
         border: 1px solid transparent;
@@ -568,11 +561,11 @@
         transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         position: relative;
     }
-
+ 
     .luxury-modal-overlay.active .luxury-modal-content {
         transform: translateY(0);
     }
-
+ 
     .modal-crest {
         font-family: var(--font-display);
         font-size: 2.2rem;
@@ -582,7 +575,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+ 
     .modal-tagline {
         font-family: var(--font-display);
         font-size: 0.8rem;
@@ -591,7 +584,7 @@
         margin-bottom: 3rem;
         text-transform: uppercase;
     }
-
+ 
     .modal-body {
         font-size: 1.15rem;
         color: var(--text-muted);
@@ -600,7 +593,7 @@
         font-weight: 300;
         text-align: justify;
     }
-
+ 
     .modal-close-btn {
         background: transparent;
         color: var(--text-light);
@@ -613,14 +606,14 @@
         cursor: pointer;
         transition: all 0.4s ease;
     }
-
+ 
     .modal-close-btn:hover {
         background: var(--gold-solid);
         color: #000000;
         border-color: var(--gold-solid);
         font-weight: 600;
     }
-
+ 
     footer {
         background: var(--bg-dark);
         color: var(--text-muted);
@@ -628,7 +621,7 @@
         padding: 8rem 2rem;
         border-top: 1px solid rgba(212, 175, 55, 0.1);
     }
-
+ 
     .footer-logo {
         font-family: var(--font-display);
         font-size: 2rem;
@@ -638,13 +631,13 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+ 
     .footer-tagline {
         font-size: 1.4rem;
         font-style: italic;
         margin-bottom: 4rem;
     }
-
+ 
     .footer-contact {
         font-family: var(--font-display);
         font-size: 0.9rem;
@@ -655,36 +648,36 @@
         gap: 1rem;
         align-items: center;
     }
-
+ 
     .footer-contact a {
         color: var(--text-light);
         text-decoration: none;
         border-bottom: 1px dashed var(--gold-solid);
         transition: color 0.3s ease;
     }
-
+ 
     .footer-contact a:hover {
         color: var(--gold-bright);
     }
-
+ 
     .social-icons-wrapper {
         margin-top: 3.5rem;
         display: flex;
         justify-content: center;
         gap: 2.5rem;
     }
-
+ 
     .social-icon-link {
         color: var(--text-muted);
         transition: transform 0.4s ease, color 0.4s ease;
         display: inline-block;
     }
-
+ 
     .social-icon-link:hover {
         color: var(--gold-solid);
         transform: translateY(-3px);
     }
-
+ 
     .social-icon-link svg {
         width: 30px !important;
         height: 30px !important;
@@ -694,37 +687,39 @@
     .social-icon-link:hover svg {
         opacity: 0.6;
     }
-
+ 
     .footer-platforms-list {
         margin-top: 2rem;
         font-size: 0.85rem;
         letter-spacing: 2px;
         opacity: 0.4;
     }
-
+ 
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(15px); }
         to { opacity: 1; transform: translateY(0); }
     }
-
+ 
     /* Mobile: Force single column stack */
-@media(max-width: 768px) {
-    .grid-3 {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* Forces each card to occupy its own line */
-        gap: 2rem !important;
+    @media(max-width: 768px) {
+        .grid-3 {
+            display: grid !important;
+            grid-template-columns: 1fr !important; /* Forces each card to occupy its own line */
+            gap: 2rem !important;
+        }
     }
-}
-
-/* Desktop: Force three-column row */
-@media(min-width: 769px) {
-    .grid-3 {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* Forces 3 cards side-by-side */
-        gap: 3.5rem !important;
+ 
+    /* Desktop: Force three-column row */
+    @media(min-width: 769px) {
+        .grid-3 {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important; /* Forces 3 cards side-by-side */
+            gap: 3.5rem !important;
+        }
     }
-}
-        
+ 
+    /* Mobile-only overrides — everything below is now correctly scoped so it no longer overrides desktop styles */
+    @media(max-width: 768px) {
         nav { 
             display: none;
         }
@@ -732,7 +727,7 @@
         .hero {
             padding: 0 1rem;
         }
-
+ 
         .hero-logo-wrapper { 
             max-width: 240px; 
             margin-bottom: 1.2rem;
@@ -745,7 +740,7 @@
             padding: 0 0.5rem;
             text-align: center;
         }
-
+ 
         .hero-tagline {
             font-size: 0.85rem;
             text-align: center;
@@ -757,7 +752,7 @@
             margin-bottom: 3.5rem;
             text-align: center;
         }
-
+ 
         .occasions, .packages-section, .enquiry-section { 
             padding: 4rem 1.5rem; 
         }
@@ -766,7 +761,7 @@
             padding: 4rem 1.2rem;
             text-align: center;
         }
-
+ 
         .atelier-split-layout {
             grid-template-columns: 1fr;
             gap: 2rem;
@@ -774,43 +769,43 @@
             padding: 0;
             align-items: center;
         }
-
+ 
         .atelier-video-wrapper {
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
         }
-
+ 
         .atelier-text-wrapper {
             text-align: center;
             width: 100%;
         }
-
+ 
         .about-quote {
             font-size: 1.4rem;
             margin-bottom: 1.5rem;
             text-align: center;
             margin-top: 1rem;
         }
-
+ 
         .about-text {
             font-size: 1.1rem;
             text-align: center;
             line-height: 1.7;
         }
-
+ 
         .grid-3 { 
             gap: 2.5rem; 
         }
-
+ 
         .card {
             padding: 3rem 1.5rem;
         }
-
+ 
         .process-section {
             padding: 4rem 1.5rem;
         }
-
+ 
         .process-item {
             font-size: 1.1rem;
             text-align: center;
@@ -818,15 +813,15 @@
             align-items: center;
             gap: 0.5rem;
         }
-
+ 
         .luxury-modal-content {
             padding: 3rem 1.5rem;
         }
-
+ 
         .modal-crest {
             font-size: 1.6rem;
         }
-
+ 
         .modal-body {
             font-size: 1.0rem;
             text-align: center;
@@ -835,7 +830,7 @@
     </style>
 </head>
 <body>
-
+ 
    <header>
         <a href="#" class="logo-nav">VELORÉVA</a>
         <nav>
@@ -847,15 +842,15 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
+ 
     <section class="hero">
         <div class="hero-logo-wrapper">
             <img src="logo.png" alt="Veloréva Studios Logo" class="hero-logo">
         </div>
-        <p class="hero-subtitle">Luxury cinematic songs for life’s most meaningful moments.</p>
-        <p class="hero-tagline">“Your memories, composed forever.”</p>
+        <p class="hero-subtitle">Luxury cinematic songs for life's most meaningful moments.</p>
+        <p class="hero-tagline">"Your memories, composed forever."</p>
     </section>
-
+ 
    <section id="atelier" class="about-section">
         <div class="about-container">
             <h2 class="section-title">The Atelier</h2>
@@ -867,17 +862,17 @@
                         <source src="intro-preview.mp4" type="video/mp4">
                     </video>
                 </div>
-
+ 
                 <div class="atelier-text-wrapper">
-                    <p class="about-quote">“We do not merely write lyrics; we capture a lifetime of emotion, composed into an everlasting cinematic heirloom.”</p>
+                    <p class="about-quote">"We do not merely write lyrics; we capture a lifetime of emotion, composed into an everlasting cinematic heirloom."</p>
                     <p class="about-text">
-                        Veloréva Studios was born from a singular, uncompromising vision: to elevate life’s most profound milestones through the timeless power of bespoke, high-fidelity orchestration. Whether honoring a beautiful legacy, celebrating a monumental triumph, or sealing a once-in-a-lifetime devotion, we sculpt your personal narrative into haute couture musical compositions. Based in the United Kingdom, our elite creative directors and master producers blend cinematic arrangements with breathtaking vocal narratives—spanning cinematic orchestration, soulful melodies, and vibrant contemporary rhythms. Every commission is an intimate collaboration, meticulously polished to ensure your most treasured memories live on forever.
+                        Veloréva Studios was born from a singular, uncompromising vision: to elevate life's most profound milestones through the timeless power of bespoke, high-fidelity orchestration. Whether honoring a beautiful legacy, celebrating a monumental triumph, or sealing a once-in-a-lifetime devotion, we sculpt your personal narrative into haute couture musical compositions. Based in the United Kingdom, our elite creative directors and master producers blend cinematic arrangements with breathtaking vocal narratives—spanning cinematic orchestration, soulful melodies, and vibrant contemporary rhythms. Every commission is an intimate collaboration, meticulously polished to ensure your most treasured memories live on forever.
                     </p>
                 </div>
-
+ 
             </div> </div>
     </section>
-
+ 
     <section id="commissions" class="occasions">
         <h2 class="section-title">The Bespoke Collections</h2>
         <div class="grid-3">
@@ -900,7 +895,7 @@
                     </audio>
                 </div>
             </div>
-
+ 
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">02 ✧ Honor</div>
                 <h3 class="card-h3">Graduation</h3>
@@ -919,7 +914,7 @@
                     </audio>
                 </div>
             </div>
-
+ 
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">03 ✧ Intent</div>
                 <h3 class="card-h3">Proposals</h3>
@@ -938,7 +933,7 @@
                     </audio>
                 </div>
             </div>
-
+ 
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">04 ✧ Romance</div>
                 <h3 class="card-h3">Weddings</h3>
@@ -957,7 +952,7 @@
                     </audio>
                 </div>
             </div>
-
+ 
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">05 ✧ Devotion</div>
                 <h3 class="card-h3">Anniversaries</h3>
@@ -976,7 +971,7 @@
                     </audio>
                 </div>
             </div>
-
+ 
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">06 ✧ Narrative & Reflection</div>
                 <h3 class="card-h3">Tributes</h3>
@@ -1006,7 +1001,7 @@
                     </div>
                 </div>
             </div>
-
+ 
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">07 ✧ Memorial</div>
                 <h3 class="card-h3">Funeral Tributes</h3>
@@ -1025,7 +1020,7 @@
                     </audio>
                 </div>
             </div>
-
+ 
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">08 ✧ Devotional Spirit</div>
                 <h3 class="card-h3">Praise & Worship</h3>
@@ -1044,7 +1039,7 @@
                     </audio>
                 </div>
             </div>
-
+ 
             <div class="card" onclick="toggleVideo(this)">
                 <div class="card-icon">09 ✧ Visionary Identity</div>
                 <h3 class="card-h3">Corporate Compositions</h3>
@@ -1063,7 +1058,7 @@
                     </audio>
                 </div>
             </div>
-
+ 
         </div>
         
   <section id="packages" class="packages-section">
@@ -1082,7 +1077,7 @@
             <a href="https://wa.me/447784393456" class="cta-btn">Enquire via WhatsApp</a>
             <a href="https://paypal.me/shaQ78/70" target="_blank" class="cta-btn">Secure Payment</a>
         </div>
-
+ 
         <div class="card featured">
             <div class="card-icon">02 ✧ Cinematic</div>
             <h3 class="card-h3">The Cinematic</h3>
@@ -1095,7 +1090,7 @@
             <a href="https://wa.me/447784393456" class="cta-btn">Enquire via WhatsApp</a>
             <a href="https://paypal.me/shaQ78/120" target="_blank" class="cta-btn">Secure Payment</a>
         </div>
-
+ 
         <div class="card">
             <div class="card-icon">03 ✧ Legacy</div>
             <h3 class="card-h3">The Legacy</h3>
@@ -1109,7 +1104,7 @@
             <a href="https://wa.me/447784393456" class="cta-btn">Enquire via WhatsApp</a>
             <a href="https://paypal.me/shaQ78/189" target="_blank" class="cta-btn">Secure Payment</a>
         </div>
-
+ 
     </div>
 </section>
     <section id="process" class="process-section">
@@ -1137,7 +1132,7 @@
             </li>
         </ul>
     </section>
-
+ 
     <section id="enquiry" class="enquiry-section">
         <div class="enquiry-container">
             <h2 class="section-title">Bespoke Enquiry</h2>
@@ -1162,7 +1157,7 @@
             </form>
         </div>
     </section>
-
+ 
     <div id="luxury-thankyou-modal" class="luxury-modal-overlay">
         <div class="luxury-modal-content">
             <div class="modal-crest">VELORÉVA STUDIOS</div>
@@ -1175,10 +1170,10 @@
             <button class="modal-close-btn" onclick="closeLuxuryModal()">Return to Atelier</button>
         </div>
     </div>
-
+ 
     <footer id="contact">
         <div class="footer-logo">VELORÉVA STUDIOS</div>
-        <p class="footer-tagline">Let’s turn your story into a song.</p>
+        <p class="footer-tagline">Let's turn your story into a song.</p>
         
         <div class="footer-contact">
             <p>Direct Atelier: <a href="tel:+447784393456">+44 (0) 7784 393456</a></p>
@@ -1186,21 +1181,21 @@
                 Concierge: <a href="https://wa.me/447784393456" style="color: var(--gold-solid); font-weight: 500; border-bottom: 1px solid var(--gold-solid);">Message via WhatsApp</a>
             </p>
         </div>
-
+ 
         <div class="social-icons-wrapper">
             <a href="https://instagram.com/velorevastudios" target="_blank" class="social-icon-link" aria-label="Instagram">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07;-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
             </a>
             <a href="https://tiktok.com/@velorevastudios" target="_blank" class="social-icon-link" aria-label="TikTok">
                 <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.05 1.61 4.21 1.13 1.25 2.74 2.08 4.38 2.3v3.89c-1.84 0-3.66-.49-5.23-1.42-.23-.14-.45-.29-.66-.45-.04 2.11.01 4.21-.01 6.32-.12 2.72-1.39 5.37-3.71 6.84-2.37 1.47-5.54 1.71-8.1 0-2.45-1.6-3.72-4.6-3.32-7.51.36-2.88 2.45-5.38 5.28-6.09.84-.21 1.71-.27 2.57-.18v4.06c-.63-.15-1.32-.12-1.94.12-1.12.44-1.89 1.54-1.97 2.73-.11 1.25.54 2.49 1.58 3.12 1.07.66 2.51.6 3.49-.19.78-.61 1.21-1.6 1.21-2.6.03-3.61-.02-7.22.02-10.83z"/></svg>
             </a>
         </div>
-
+ 
         <div class="footer-platforms-list">
             @velorevastudios • Fiverr • Etsy
         </div>
     </footer>
-
+ 
     <script>
         function silenceAllPlayers(activeMediaInstance) {
             const architecturalVideos = document.querySelectorAll('video');
@@ -1209,7 +1204,7 @@
                     v.pause();
                 }
             });
-
+ 
             const architecturalAudios = document.querySelectorAll('audio');
             architecturalAudios.forEach(a => {
                 if (a !== activeMediaInstance) {
@@ -1217,11 +1212,11 @@
                 }
             });
         }
-
+ 
         window.addEventListener('play', function(e) {
             silenceAllPlayers(e.target);
         }, true);
-
+ 
         function toggleVideo(cardElement) {
             const videoContainer = cardElement.querySelector('.video-container');
             const videoElement = videoContainer.querySelector('video');
@@ -1241,26 +1236,26 @@
                 });
             }
         }
-
+ 
         const targetedWrappers = document.querySelectorAll('.video-container, .audio-player-wrapper, .atelier-video-wrapper');
         targetedWrappers.forEach(item => {
             item.addEventListener('click', function(evt) {
                 evt.stopPropagation();
             });
         });
-
+ 
         const formElement = document.getElementById('veloreva-form');
         const submitButton = document.getElementById('submit-button');
         const modalOverlay = document.getElementById('luxury-thankyou-modal');
-
+ 
         formElement.addEventListener('submit', function(event) {
             event.preventDefault();
             
             submitButton.innerText = "Transmitting to Atelier...";
             submitButton.disabled = true;
-
+ 
             const formData = new FormData(formElement);
-
+ 
             fetch(formElement.action, {
                 method: 'POST',
                 body: formData,
@@ -1285,10 +1280,11 @@
                 submitButton.disabled = false;
             });
         });
-
+ 
         function closeLuxuryModal() {
             modalOverlay.classList.remove('active');
         }
     </script>
 </body>
 </html>
+ 
